@@ -1,36 +1,36 @@
-const username = document.querySelector('#username')
-const saveScoreBtn = document.querySelector('#saveScoreBtn')
-const finalScore = document.querySelector('#finalScore')
-const mostRecentScore = localStorage.getItem('mostRecentScore')
+const username = document.querySelector('#username') // This is the input field
+const saveScoreBtn = document.querySelector('#saveScoreBtn') // This is the button
+const finalScore = document.querySelector('#finalScore') // This is the span
+const mostRecentScore = localStorage.getItem('mostRecentScore') // This is the score from the game.js file
 
-const highScores = JSON.parse(localStorage.getItem('highScores')) || []
+const highScores = JSON.parse(localStorage.getItem('highScores')) || [] // This is the array of high scores
 
-const MAX_HIGH_SCORES = 5
+const MAX_HIGH_SCORES = 5 // This is the max number of high scores
 
-finalScore.innerText = mostRecentScore
+finalScore.innerText = mostRecentScore // Set the final score text to the most recent score
 
-username.addEventListener('keyup', () => {
-    saveScoreBtn.disabled = !username.value
+username.addEventListener('keyup', () => { // When the user types in the username field
+    saveScoreBtn.disabled = !username.value // Disable the save button if the username field is empty
 })
 
-saveHighScore = e => {
-    e.preventDefault()
+saveHighScore = e => { // This function saves the high score
+    e.preventDefault() // Prevent the default action
 
-    const score = {
-        score: mostRecentScore,
-        name: username.value
+    const score = { // This is the score object
+        score: mostRecentScore, // The score is the most recent score
+        name: username.value // The name is the value of the username field
     }
 
-    highScores.push(score)
+    highScores.push(score) // Push the score object to the high scores array
 
-    highScores.sort((a,b) => {
-        return b.score - a.score
+    highScores.sort((a,b) => { // Sort the high scores array
+        return b.score - a.score // Sort the high scores array
     })
 
-    highScores.splice(5)
+    highScores.splice(5) // Remove the last item in the array
 
-    localStorage.setItem('highScores', JSON.stringify(highScores))
-    window.location.assign('/')
+    localStorage.setItem('highScores', JSON.stringify(highScores)) // Save the high scores array to local storage  
+    window.location.assign('/') // Go to the home page
 
     
 }
