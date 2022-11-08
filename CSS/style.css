@@ -140,3 +140,11 @@ input::placeholder {
     font-size: 2rem;
     color: rgb(28, 26, 26)
 }
+
+.genres-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
