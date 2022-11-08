@@ -77,13 +77,14 @@ let questions = [
         answer: 3,
     },
     {
-        question: 'How long did the Han Dynasty rule over China?',
-        choice1: '150 years',
-        choice2: '300 years',
-        choice3: '900 years',
-        choice4: '400 years',
-        answer: 4,
-    }
+        question:
+            "What is the name of the largest ocean on Earth?",
+        choice1: "Pacific Ocean",
+        choice2: "Atlantic Ocean",
+        choice3: "Indian Ocean",
+        choice4: "None of the above",
+        answer: 1,
+    },
 ]
 
 const SCORE_POINTS = 100;
