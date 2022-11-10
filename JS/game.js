@@ -90,7 +90,7 @@ let questions = [
 
 const SCORE_POINTS = 100;
 const MAX_QUESTIONS = 9;
-//const LIFE_POINTS = 3;
+const LIFE_POINTS = 3;
 
 startGame = () => {
     questionCounter = 0 // reset the question counter
@@ -150,18 +150,6 @@ choices.forEach(choice => { // for each choice
             getNewQuestion() // get a new question
 
         }, 1000) // after 1 second
-
-    /*if (classToApply === 'incorrect') {
-        decrementLives(LIFE_POINTS)
-    }
-
-    selectedChoice.parentElement.classList.add(classToApply);
-        setTimeout(() => { // after 1 second
-            selectedChoice.parentElement.classList.remove(classToApply) // remove the class from the parent of the selected choice
-            getNewQuestion() // get a new question
-
-        }, 1000) // after 1 second
-      */  
     })
 })
 

@@ -67,9 +67,10 @@ body {
     width: 0%;
 }
 
-#lives {
+#life {
     display: flex;
-    border:rgba(230, 29, 29, 1) 0.2rem solid;
+    justify-content: space-between;
+    height: 10rem;
 }
 
 @media screen and (max-width: 768px) {
