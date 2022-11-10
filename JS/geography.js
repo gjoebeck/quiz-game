@@ -3,12 +3,14 @@ const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
+const livesText = document.querySelector('#life');
 
 let currentQuestion = {} 
 let acceptingAnswers = true
 let score = 0
 let questionCounter = 0
 let availableQuestions = []
+//let lives = 3;
 
 let questions = [
     {
@@ -89,16 +91,18 @@ let questions = [
 
 const SCORE_POINTS = 100;
 const MAX_QUESTIONS = 9;
+const LIFE_POINTS = 3;
 
 startGame = () => {
     questionCounter = 0 // reset the question counter
     score = 0 // reset the score
+    lives = 3 // reset the lives
     availableQuestions = [...questions] // copy the questions array to the available questions array
     getNewQuestion() // get a new question
 }
 
 getNewQuestion = () => {
-    if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) { // if there are no more questions or we've reached the max number of questions
+    if(lives === 0 || availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) { // if there are no more questions or we've reached the max number of questions
         localStorage.setItem('mostRecentScore', score) // save the score to local storage
 
         return window.location.assign('end.html') // go to the end page
@@ -107,6 +111,7 @@ getNewQuestion = () => {
     questionCounter++ // increment the question counter
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}` // update the progress text
     progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%` // update the progress bar
+    livesText.innerText = `Lives: ${lives}` // update the lives
     
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length) // get a random question
     currentQuestion = availableQuestions[questionsIndex] // get a random question
@@ -133,7 +138,10 @@ choices.forEach(choice => { // for each choice
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect' // if the answer is correct, apply the correct class, otherwise apply the incorrect class
 
         if(classToApply === 'correct') { // if the answer is correct
-            incrementScore(SCORE_POINTS) // increment the score
+            incrementScore(SCORE_POINTS) // increment the score     
+        }
+        else { // if the answer is incorrect
+            decrementLives() // decrement the lives 
         }
 
         selectedChoice.parentElement.classList.add(classToApply) // add the class to the parent of the selected choice
@@ -143,12 +151,18 @@ choices.forEach(choice => { // for each choice
             getNewQuestion() // get a new question
 
         }, 1000) // after 1 second
+
     })
 })
 
 incrementScore = num => { // increment the score
     score +=num // add the number to the score
     scoreText.innerText = score // update the score text
+}
+
+decrementLives = num => { // decrement the lives
+    lives -= 1 // subtract 1 life
+    livesText.innerText = lives // update the lives text
 }
 
 startGame() // start the game
