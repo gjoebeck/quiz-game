@@ -148,3 +148,11 @@ input::placeholder {
     align-items: center;
     margin-top: 2rem;
 }
+
+#safeTimerDisplay {
+    
+    font-size: 2.4rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    justify-content: center;
+}

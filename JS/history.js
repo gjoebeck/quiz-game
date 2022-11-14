@@ -112,7 +112,7 @@ startGame = () => {
 }
 
 getNewQuestion = () => {
-    if(lives === 0 || availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) { // if there are no more questions or we've reached the max number of questions
+    if (lives === 0 || availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) { // if there are no more questions or we've reached the max number of questions
         localStorage.setItem('mostRecentScore', score) // save the score to local storage
 
         return window.location.assign('end.html') // go to the end page

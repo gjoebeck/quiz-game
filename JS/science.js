@@ -18,6 +18,7 @@ let questions = [
         choice1: 'Yes',
         choice2: 'No',
         choice3: 'Maybe',
+        choice4: 'If the person has really good eyesight',
         answer: 2,
     },
     {

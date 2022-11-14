@@ -10,6 +10,7 @@ let acceptingAnswers = true
 let score = 0
 let questionCounter = 0
 let availableQuestions = []
+let timer = 20;
 //let lives = 3;
 
 let questions = [
@@ -91,7 +92,8 @@ let questions = [
 
 const SCORE_POINTS = 100;
 const MAX_QUESTIONS = 9;
-const LIFE_POINTS = 3;
+let LIFE_POINTS = 3;
+let TIMER = 20;
 
 startGame = () => {
     questionCounter = 0 // reset the question counter
@@ -127,7 +129,23 @@ getNewQuestion = () => {
     acceptingAnswers = true // allow the user to answer
 }
 
-choices.forEach(choice => { // for each choice
+choices.forEach(choice => {
+    function timer(){
+        let sec = 5;
+        var timer = setInterval(function(){
+            document.getElementById('safeTimerDisplay').innerHTML='00:'+sec;
+            sec--;
+            if (sec < 0) {
+                clearInterval(timer);
+                document.getElementById('safeTimerDisplay').innerHTML='Time is up!';
+                alert("Time is up! You lose a life!");
+                lives--;
+                getNewQuestion()
+            }
+        }, 1000);
+    }
+    timer();
+ // for each choice
     choice.addEventListener('click', e => { // when the choice is clicked
         if(!acceptingAnswers) return // if we're not accepting answers, return
 
@@ -149,7 +167,7 @@ choices.forEach(choice => { // for each choice
         setTimeout(() => { // after 1 second
             selectedChoice.parentElement.classList.remove(classToApply) // remove the class from the parent of the selected choice
             getNewQuestion() // get a new question
-
+            
         }, 1000) // after 1 second
 
     })
@@ -167,3 +185,5 @@ decrementLives = num => { // decrement the lives
 
 startGame() // start the game
 
+
+window.onload()
