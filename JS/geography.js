@@ -10,7 +10,6 @@ let acceptingAnswers = true
 let score = 0
 let questionCounter = 0
 let availableQuestions = []
-let timer = 20;
 //let lives = 3;
 
 let questions = [
@@ -93,7 +92,7 @@ let questions = [
 const SCORE_POINTS = 100;
 const MAX_QUESTIONS = 9;
 let LIFE_POINTS = 3;
-let TIMER = 20;
+
 
 startGame = () => {
     questionCounter = 0 // reset the question counter
@@ -131,17 +130,17 @@ getNewQuestion = () => {
 
 choices.forEach(choice => {
     function timer(){
-        let sec = 5;
+        let sec = 30;
         var timer = setInterval(function(){
             document.getElementById('safeTimerDisplay').innerHTML='00:'+sec;
             sec--;
             if (sec < 0) {
+                sec = 30;
+                lives-=1;
                 clearInterval(timer);
-                document.getElementById('safeTimerDisplay').innerHTML='Time is up!';
-                alert("Time is up! You lose a life!");
-                lives--;
+                
                 getNewQuestion()
-            }
+            } 
         }, 1000);
     }
     timer();
