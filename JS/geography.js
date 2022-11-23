@@ -5,6 +5,7 @@ const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
 const livesText = document.querySelector('#life');
 
+
 let currentQuestion = {} 
 let acceptingAnswers = true
 let score = 0
@@ -112,6 +113,7 @@ getNewQuestion = () => {
     }
 
     questionCounter++ // increment the question counter
+
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}` // update the progress text
     progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%` // update the progress bar
     livesText.innerText = `Lives: ${lives}` // update the lives
@@ -142,7 +144,11 @@ function timer(){
 
             getNewQuestion()    
         } 
+
+    
     }, 1000);
+   
+
 }
 timer();
 
@@ -161,9 +167,16 @@ choices.forEach(choice => {
 
         if(classToApply === 'correct') { // if the answer is correct
             incrementScore(SCORE_POINTS) // increment the score    
+            const correctSound = new Audio('mixkit-correct-answer-tone-2870.wav') // play the correct sound
+            correctSound.volume = 0.2;
+            correctSound.play()
+            sec += 15;
         }
         else { // if the answer is incorrect
             decrementLives() // decrement the lives 
+            const incorrectSound = new Audio('342756__rhodesmas__failure-01.wav') // play the incorrect sound
+            incorrectSound.volume = 0.2;
+            incorrectSound.play()
         }
 
         selectedChoice.parentElement.classList.add(classToApply) // add the class to the parent of the selected choice
