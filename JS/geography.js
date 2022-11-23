@@ -101,6 +101,7 @@ startGame = () => {
     let sec = 30;
     availableQuestions = [...questions] // copy the questions array to the available questions array
     getNewQuestion() // get a new question
+    
 }
 
 getNewQuestion = () => {
@@ -138,7 +139,7 @@ function timer(){
             sec += 30;
             lives-=1;
             //  clearInterval(timer);
-            
+
             getNewQuestion()
         } 
     }, 1000);
