@@ -157,7 +157,7 @@ input::placeholder {
     justify-content: center;
 }
 
-#toggleMusic {
+#muteMusic {
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -165,3 +165,4 @@ input::placeholder {
     color: #fff;
     cursor: pointer;
 }
+
