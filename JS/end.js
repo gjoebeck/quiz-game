@@ -2,11 +2,11 @@ const username = document.querySelector('#username') // This is the input field
 const saveScoreBtn = document.querySelector('#saveScoreBtn') // This is the button
 const finalScore = document.querySelector('#finalScore') // This is the span
 const mostRecentScore = localStorage.getItem('mostRecentScore') // This is the score from the game.js file
-const toggleMusic = document.querySelector('#toggleMusic') // This is the toggle music button
+const muteMusic = document.querySelector('#muteMusic') // This is the toggle music button
 const highScores = JSON.parse(localStorage.getItem('highScores')) || [] // This is the array of high scores
 
 const MAX_HIGH_SCORES = 5 // This is the max number of high scores
-
+let counter = 0;
 finalScore.innerText = mostRecentScore // Set the final score text to the most recent score
 
 username.addEventListener('keyup', () => { // When the user types in the username field
@@ -41,12 +41,17 @@ window.addEventListener("DOMContentLoaded", event => {
     audio.play();
   });
 
-  toggleMusic.addEventListener('click', event => {
-    
+  muteMusic.addEventListener('click', event => {
+    counter++
     const audio = document.querySelector("audio");
-    audio.volume = 0.0;
-    audio.pause();
-    sound.currentTime = 0;
-
+     if (counter % 2 == 0) {
+        audio.volume = 0.2;
+        audio.play();
+     } else {
+        audio.volume = 0.0;
+        audio.pause();
+        sound.currentTime = 0;  
+     }
   });
 
+  
