@@ -156,3 +156,12 @@ input::placeholder {
     margin-bottom: 2rem;
     justify-content: center;
 }
+
+#toggleMusic {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}

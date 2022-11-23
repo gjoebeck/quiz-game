@@ -2,7 +2,7 @@ const username = document.querySelector('#username') // This is the input field
 const saveScoreBtn = document.querySelector('#saveScoreBtn') // This is the button
 const finalScore = document.querySelector('#finalScore') // This is the span
 const mostRecentScore = localStorage.getItem('mostRecentScore') // This is the score from the game.js file
-
+const toggleMusic = document.querySelector('#toggleMusic') // This is the toggle music button
 const highScores = JSON.parse(localStorage.getItem('highScores')) || [] // This is the array of high scores
 
 const MAX_HIGH_SCORES = 5 // This is the max number of high scores
@@ -40,3 +40,13 @@ window.addEventListener("DOMContentLoaded", event => {
     audio.volume = 0.2;
     audio.play();
   });
+
+  toggleMusic.addEventListener('click', event => {
+    
+    const audio = document.querySelector("audio");
+    audio.volume = 0.0;
+    audio.pause();
+    sound.currentTime = 0;
+
+  });
+
