@@ -98,10 +98,10 @@ startGame = () => {
     questionCounter = 0 // reset the question counter
     score = 0 // reset the score
     lives = 3 // reset the lives
-    let sec = 30;
+    let sec = 15;
     availableQuestions = [...questions] // copy the questions array to the available questions array
     getNewQuestion() // get a new question
-    
+
 }
 
 getNewQuestion = () => {
@@ -131,16 +131,16 @@ getNewQuestion = () => {
 }
 
 function timer(){
-    let sec = 30;
+    let sec = 15;
     var timer = setInterval(function(){
-        document.getElementById('safeTimerDisplay').innerHTML='00:' + sec;
+        document.getElementById('safeTimerDisplay').innerHTML='' + sec;
         sec--;
         if (sec < 0) {
-            sec += 30;
+            sec += 15;
             lives-=1;
             //  clearInterval(timer);
 
-            getNewQuestion()
+            getNewQuestion()    
         } 
     }, 1000);
 }
@@ -160,7 +160,7 @@ choices.forEach(choice => {
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect' // if the answer is correct, apply the correct class, otherwise apply the incorrect class
 
         if(classToApply === 'correct') { // if the answer is correct
-            incrementScore(SCORE_POINTS) // increment the score     
+            incrementScore(SCORE_POINTS) // increment the score    
         }
         else { // if the answer is incorrect
             decrementLives() // decrement the lives 
@@ -188,6 +188,11 @@ decrementLives = num => { // decrement the lives
 }
 
 startGame() // start the game
-
+window.addEventListener("DOMContentLoaded", event => {
+    const audio = document.querySelector("audio");
+    audio.volume = 0.2;
+    audio.play();
+  });
 
 window.onload()
+

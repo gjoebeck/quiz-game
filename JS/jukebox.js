@@ -1,1 +1,0 @@
-let playSound = () => new Audio("C:\Users\gjoeb\Desktop\quiz-game\password-infinity-123276.mp3").play()
