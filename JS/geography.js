@@ -98,6 +98,7 @@ startGame = () => {
     questionCounter = 0 // reset the question counter
     score = 0 // reset the score
     lives = 3 // reset the lives
+    let sec = 30;
     availableQuestions = [...questions] // copy the questions array to the available questions array
     getNewQuestion() // get a new question
 }
@@ -128,22 +129,25 @@ getNewQuestion = () => {
     acceptingAnswers = true // allow the user to answer
 }
 
+function timer(){
+    let sec = 30;
+    var timer = setInterval(function(){
+        document.getElementById('safeTimerDisplay').innerHTML='00:' + sec;
+        sec--;
+        if (sec < 0) {
+            sec += 30;
+            lives-=1;
+            //  clearInterval(timer);
+            
+            getNewQuestion()
+        } 
+    }, 1000);
+}
+timer();
+
+
+
 choices.forEach(choice => {
-    function timer(){
-        let sec = 30;
-        var timer = setInterval(function(){
-            document.getElementById('safeTimerDisplay').innerHTML='00:'+sec;
-            sec--;
-            if (sec < 0) {
-                sec = 30;
-                lives-=1;
-                clearInterval(timer);
-                
-                getNewQuestion()
-            } 
-        }, 1000);
-    }
-    timer();
  // for each choice
     choice.addEventListener('click', e => { // when the choice is clicked
         if(!acceptingAnswers) return // if we're not accepting answers, return
