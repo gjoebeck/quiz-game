@@ -11,6 +11,7 @@ let acceptingAnswers = true
 let score = 0
 let questionCounter = 0
 let availableQuestions = []
+let incremented = false;    
 //let lives = 3;
 
 let questions = [
@@ -99,7 +100,6 @@ startGame = () => {
     questionCounter = 0 // reset the question counter
     score = 0 // reset the score
     lives = 3 // reset the lives
-    let sec = 15;
     availableQuestions = [...questions] // copy the questions array to the available questions array
     getNewQuestion() // get a new question
 
@@ -130,65 +130,70 @@ getNewQuestion = () => {
     availableQuestions.splice(questionsIndex, 1) // remove the question from the available questions
 
     acceptingAnswers = true // allow the user to answer
+    // timer();
 }
 
 function timer(){
     let sec = 15;
-    var timer = setInterval(function(){
+    const timer = setInterval(function(){
         document.getElementById('safeTimerDisplay').innerHTML='' + sec;
         sec--;
+
+        choices.forEach(choice => {
+            // for each choice
+               choice.addEventListener('click', e => { // when the choice is clicked
+                   if(!acceptingAnswers) return // if we're not accepting answers, return
+           
+                   acceptingAnswers = false // we're no longer accepting answers
+                   const selectedChoice = e.target // get the selected choice
+                   const selectedAnswer = selectedChoice.dataset['number'] // get the number of the selected choice
+           
+                   let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect' // if the answer is correct, apply the correct class, otherwise apply the incorrect class
+           
+                   if(classToApply === 'correct') { // if the answer is correct
+                       incrementScore(SCORE_POINTS) // increment the score    
+                       const correctSound = new Audio('mixkit-correct-answer-tone-2870.wav') // play the correct sound
+                       correctSound.volume = 0.2;
+                       correctSound.play();
+                       sec = 15;        
+                   }
+                   else { // if the answer is incorrect
+                       decrementLives() // decrement the lives 
+                       const incorrectSound = new Audio('342756__rhodesmas__failure-01.wav') // play the incorrect sound
+                       incorrectSound.volume = 0.4;
+                       incorrectSound.play();
+                       sec = 15;
+                   }
+           
+                   selectedChoice.parentElement.classList.add(classToApply) // add the class to the parent of the selected choice
+           
+                   setTimeout(() => { // after 1 second
+                       selectedChoice.parentElement.classList.remove(classToApply) // remove the class from the parent of the selected choice
+                       getNewQuestion() // get a new question
+                       
+                   }, 1000) // after 1 second
+               })
+           
+           })
+           
+
         if (sec < 0) {
             sec += 15;
             lives-=1;
-            //  clearInterval(timer);
-
+          //  clearInterval(timer);
             getNewQuestion()    
-        } 
+        }
 
-    
-    }, 1000);
-   
+
+    }, 1000); 
+
+
+
 
 }
 timer();
 
 
-
-choices.forEach(choice => {
- // for each choice
-    choice.addEventListener('click', e => { // when the choice is clicked
-        if(!acceptingAnswers) return // if we're not accepting answers, return
-
-        acceptingAnswers = false // we're no longer accepting answers
-        const selectedChoice = e.target // get the selected choice
-        const selectedAnswer = selectedChoice.dataset['number'] // get the number of the selected choice
-
-        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect' // if the answer is correct, apply the correct class, otherwise apply the incorrect class
-
-        if(classToApply === 'correct') { // if the answer is correct
-            incrementScore(SCORE_POINTS) // increment the score    
-            const correctSound = new Audio('mixkit-correct-answer-tone-2870.wav') // play the correct sound
-            correctSound.volume = 0.2;
-            correctSound.play()
-            sec += 15;
-        }
-        else { // if the answer is incorrect
-            decrementLives() // decrement the lives 
-            const incorrectSound = new Audio('342756__rhodesmas__failure-01.wav') // play the incorrect sound
-            incorrectSound.volume = 0.2;
-            incorrectSound.play()
-        }
-
-        selectedChoice.parentElement.classList.add(classToApply) // add the class to the parent of the selected choice
-
-        setTimeout(() => { // after 1 second
-            selectedChoice.parentElement.classList.remove(classToApply) // remove the class from the parent of the selected choice
-            getNewQuestion() // get a new question
-            
-        }, 1000) // after 1 second
-
-    })
-})
 
 incrementScore = num => { // increment the score
     score +=num // add the number to the score
@@ -201,11 +206,12 @@ decrementLives = num => { // decrement the lives
 }
 
 startGame() // start the game
-window.addEventListener("DOMContentLoaded", event => {
-    const audio = document.querySelector("audio");
-    audio.volume = 0.2;
-    audio.play();
+window.addEventListener("DOMContentLoaded", event => { // when the DOM is loaded
+    const audio = document.querySelector("audio"); // get the audio element
+    audio.volume = 0.2; // set the volume
+    audio.play(); // play the audio
   });
 
-window.onload()
+window.onload();
+
 

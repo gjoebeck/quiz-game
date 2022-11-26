@@ -40,6 +40,7 @@ body {
     width: 100%;
 }
 
+
 .correct {
     background: linear-gradient(32deg, rgba(11, 223, 36) 0%, rgb(41, 232, 111) 100%);
 }
@@ -82,6 +83,14 @@ body {
     display: flex;
     justify-content: space-between;
     height: 10rem;
+}
+
+#safeTimerDisplay {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    
+    margin-top: 2rem;
 }
 
 @media screen and (max-width: 768px) {
