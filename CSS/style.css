@@ -103,11 +103,11 @@ h2 {
     position: relative;
     font-family: Arial;
     font-size: 60px;
-    animation: fadeIn 10s;
-    -webkit-animation: fadeIn 10s;
-    -moz-animation: fadeIn 10s;
-    -o-animation: fadeIn 10s;
-    -ms-animation: fadeIn 10s;
+    animation: fadeIn 8s;
+    -webkit-animation: fadeIn 8s;
+    -moz-animation: fadeIn 8s;
+    -o-animation: fadeIn 8s;
+    -ms-animation: fadeIn 8s;
     color:white;
   }
   
@@ -188,17 +188,7 @@ input::placeholder {
     margin-top: 2rem;
 }
 
-#safeTimerDisplay {
-    
-    font-size: 2.4rem;
-    color: #fff;
-    margin-bottom: 2rem;
-    justify-content: center;
-     text-align: center;
-    bottom: 130px;
-    position: relative;
-    padding: 15 
-}
+
 
 #muteMusic {
     position: absolute;
