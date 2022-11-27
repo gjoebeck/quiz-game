@@ -184,6 +184,14 @@ function timer(){
             getNewQuestion()    
         }
 
+        if (sec < 4) {
+            setTimeout(() => { // after 1 second
+                const tickingSound = new Audio('last_three_seconds_ticks.wav') // play the ticking sound
+                tickingSound.volume = 0.4;
+                tickingSound.play();
+            }, 1100) 
+    };
+    
 
     }, 1000); 
 

@@ -101,9 +101,8 @@ body {
 
 #safeTimerDisplay {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     font-size: 3rem;
-    margin-top: 2rem;
 }
 
 @media screen and (max-width: 768px) {
