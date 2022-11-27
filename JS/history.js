@@ -93,9 +93,7 @@ let questions = [
         choice3: 'John Steinbeck',
         choice4: 'Marie Curie née Skodowlska',
         answer: 2,
-    },
-
-
+    }
 
 ]
 
@@ -173,5 +171,7 @@ decrementLives = num => { // decrement the lives
     lives -= 1 // subtract 1 life
     livesText.innerText = lives // update the lives text
 }
+
+
 
 startGame() // start the game

@@ -60,6 +60,13 @@ h2 {
     display: none;
 }
 
+.navigation-icons {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
 .btn {
     font-size: 2.4rem;
     padding: 2rem 0;
