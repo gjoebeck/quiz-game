@@ -2,6 +2,20 @@ body {
     color: #fff;
 }
 
+.neonText {
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+  }
+  
+
 .choice-container {
     display: flex;
     margin-bottom: 0.8rem;
@@ -89,7 +103,6 @@ body {
     display: flex;
     justify-content: center;
     font-size: 3rem;
-    
     margin-top: 2rem;
 }
 

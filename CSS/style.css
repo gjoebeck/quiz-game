@@ -23,7 +23,8 @@ h1 {
 h2 {
     font-size: 4.2rem;
     margin-bottom: 4rem;
-
+    color: #fff;
+    animation: pulsate 0.11s ease-in-out infinite alternate; 
 }
 
 .container {
@@ -85,7 +86,8 @@ h2 {
 }
 
 #highscore-btn {
-    background: linear-gradient(90deg, rgb(255, 247, 9) 0%, rgb(240, 221, 6) 100%);
+    background: linear-gradient(90deg, rgb(5, 241, 202) 0%, rgb(4, 242, 250) 100%);
+    color: rgb(28, 26, 26);
 }
 
 #highscore-btn:hover {
@@ -136,6 +138,37 @@ h2 {
     100% { opacity: 1; }
   }
 
+  @keyframes pulsate {
+    
+    100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #f09,
+        0 0 80px #f09,
+        0 0 90px #f09,
+        0 0 100px #f09,
+        0 0 150px #f09;
+    
+    }
+    
+    0% {
+  
+      text-shadow:
+      0 0 4px #fff,
+      0 0 10px #fff,
+      0 0 18px #fff,
+      0 0 38px #f09,
+      0 0 73px #f09,
+      0 0 80px #f09,
+      0 0 94px #f09,
+      0 0 140px #f09;
+  
+  }
+
+  }
 /* End Page CSS */
 .end-form-container {
     width: 100%;
@@ -199,3 +232,22 @@ input::placeholder {
     cursor: pointer;
 }
 
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  @media (max-width: 750px) {
+    #background-video { display: none; }
+    body {
+      background: url("https://assets.codepen.io/6093409/river.jpg") no-repeat;
+      background-size: cover;
+    }
+}
