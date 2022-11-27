@@ -150,7 +150,7 @@ function timer(){
            
                    let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect' // if the answer is correct, apply the correct class, otherwise apply the incorrect class
            
-                   if(classToApply === 'correct') { // if the answer is correct
+                   if (classToApply === 'correct') { // if the answer is correct
                        incrementScore(SCORE_POINTS) // increment the score    
                        const correctSound = new Audio('mixkit-correct-answer-tone-2870.wav') // play the correct sound
                        correctSound.volume = 0.2;
