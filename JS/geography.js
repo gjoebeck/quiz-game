@@ -10,8 +10,7 @@ let currentQuestion = {}
 let acceptingAnswers = true
 let score = 0
 let questionCounter = 0
-let availableQuestions = []
-let incremented = false;    
+let availableQuestions = []  
 //let lives = 3;
 
 let questions = [
@@ -89,10 +88,111 @@ let questions = [
         choice4: "None of the above",
         answer: 1,
     },
+
+    {
+        question: "What is the name of the largest country in the world?",
+        choice1: "United States",
+        choice2: "Canada",
+        choice3: "China",
+        choice4: "Russia",
+        answer: 4,
+    },
+
+    {
+        question: "What is Tobler's first law of geography?",
+        choice1: "Everything is related to everything else, but near things are more related than distant things.",
+        choice2: 'The physical environment shapes human activity.',
+        choice3: 'The spatial distribution of anything across Earth’s surface results from the interaction of Earth’s surface with Earth’s atmosphere.',
+        choice4: 'The phenomenon of spatial interaction is the basis of all human activity.',
+        answer: 1,
+    },
+
+    {
+        question: "Which country is south of the equator?",
+        choice1: "Central African Republic",
+        choice2: "Venezuela",
+        choice3: "Angola",
+        choice4: "El Salvador",
+        answer: 3,
+    },
+
+    {
+        question: "What is the capital of Algeria?",
+        choice1: "Tunis",
+        choice2: "Algiers",
+        choice3: "Cairo",
+        choice4: "Tripoli",
+        answer: 2,
+    },
+
+   {
+    question: "What is the capital of Australia?",
+    choice1: "Canberra",
+    choice2: "Sydney",
+    choice3: "Melbourne",
+    choice4: "Perth",
+    answer: 1,
+   },
+
+   {
+    question: "Where is the highest mountain in the world?",
+    choice1: "Lhotse",
+    choice2: "K2",
+    choice3: "Kangchenjunga",
+    choice4: "Mount Everest",
+    answer: 4,
+   },
+
+   {
+    question: "What is the tallest free standing mountain in the world?",
+    choice1: "Mount Kilimanjaro",
+    choice2: "Mount Elbrus",
+    choice3: "Mount Aconcagua",
+    choice4: "Mount Logan",
+    answer: 1,
+   },
+
+   {
+    question: "What is the longest river in the world?",
+    choice1: "Nile",
+    choice2: "Amazon",
+    choice3: "Yangtze",
+    choice4: "Mississippi",
+    answer: 1,
+   },
+
+   {
+    question: "What is the largest lake in the world?",
+    choice1: "Lake Superior",
+    choice2: "Lake Baikal",
+    choice3: "Lake Victoria",
+    choice4: "Lake Tanganyika",
+    answer: 1,
+   },
+   
+   { 
+    question: "What is the national dish of China?",
+    choice1: "Hotpot (火锅)",
+    choice2: "Rice Noodles (过桥米线)",
+    choice3: "Yu Xiang Rou Si (鱼香肉丝)",
+    choice4: "Peking Duck (北京烤鸭)",
+    answer: 4,
+   },
+
+   {
+    question: "What is the national dish of France?",
+    choice1: "Pot-au-feu",
+    choice2: "Croque Monsieur",
+    choice3: "Quiche Lorraine",
+    choice4: "Boeuf Bourguignon)",
+    answer: 1,
+   }
+
+
 ]
 
 const SCORE_POINTS = 100;
-const MAX_QUESTIONS = 9;
+const MAX_QUESTIONS = 20;
 let LIFE_POINTS = 3;
 
 
