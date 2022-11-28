@@ -208,7 +208,6 @@ startGame = () => {
 getNewQuestion = () => {
     if(lives === 0 || availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) { // if there are no more questions or we've reached the max number of questions
         localStorage.setItem('mostRecentScore', score) // save the score to local storage
-
         return window.location.assign('end.html') // go to the end page
     }
 
@@ -252,14 +251,14 @@ function timer(){
            
                    if (classToApply === 'correct') { // if the answer is correct
                        incrementScore(SCORE_POINTS) // increment the score    
-                       const correctSound = new Audio('mixkit-correct-answer-tone-2870.wav') // play the correct sound
+                       const correctSound = new Audio('sound_effects/mixkit-correct-answer-tone-2870.wav') // play the correct sound
                        correctSound.volume = 0.2;
                        correctSound.play();
                        sec = 15;        
                    }
                    else { // if the answer is incorrect
                        decrementLives() // decrement the lives 
-                       const incorrectSound = new Audio('342756__rhodesmas__failure-01.wav') // play the incorrect sound
+                       const incorrectSound = new Audio('sound_effects/342756__rhodesmas__failure-01.wav') // play the incorrect sound
                        incorrectSound.volume = 0.4;
                        incorrectSound.play();
                        sec = 15;
@@ -286,7 +285,7 @@ function timer(){
 
         if (sec < 4) {
             setTimeout(() => { // after 1 second
-                const tickingSound = new Audio('last_three_seconds_ticks.wav') // play the ticking sound
+                const tickingSound = new Audio('sound_effects/last_three_seconds_ticks.wav') // play the ticking sound
                 tickingSound.volume = 0.4;
                 tickingSound.play();
             }, 1100) 
