@@ -184,7 +184,7 @@ let questions = [
     choice1: "Pot-au-feu",
     choice2: "Croque Monsieur",
     choice3: "Quiche Lorraine",
-    choice4: "Boeuf Bourguignon)",
+    choice4: "Boeuf Bourguignon",
     answer: 1,
    }
 
