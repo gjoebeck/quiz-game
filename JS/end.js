@@ -23,7 +23,7 @@ saveHighScore = e => { // This function saves the high score
 
     highScores.push(score) // Push the score object to the high scores array
 
-    highScores.sort((a,b) => { // Sort the high scores array
+    highScores.sort((a, b) => { // Sort the high scores array
         return b.score - a.score // Sort the high scores array
     })
 
@@ -32,26 +32,26 @@ saveHighScore = e => { // This function saves the high score
     localStorage.setItem('highScores', JSON.stringify(highScores)) // Save the high scores array to local storage  
     window.location.assign('/') // Go to the home page
 
-    
+
 }
 
 window.addEventListener("DOMContentLoaded", event => {
     const audio = document.querySelector("audio");
     audio.volume = 0.2;
     audio.play();
-  });
+});
 
-  muteMusic.addEventListener('click', event => {
+muteMusic.addEventListener('click', event => {
     counter++
     const audio = document.querySelector("audio");
-     if (counter % 2 == 0) {
+    if (counter % 2 == 0) {
         audio.volume = 0.2;
         audio.play();
-     } else {
+    } else {
         audio.volume = 0.0;
         audio.pause();
-        sound.currentTime = 0;  
-     }
-  });
+        sound.currentTime = 0;
+    }
+});
 
-  
+

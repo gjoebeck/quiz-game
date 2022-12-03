@@ -1,6 +1,11 @@
 body {
     color: #fff;
+    overflow: hidden;
 }
+
+a {
+    font-size: 10.5rem;
+  }
 
 .neonText {
     color: #fff;

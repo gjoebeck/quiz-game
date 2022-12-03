@@ -24,7 +24,11 @@ h2 {
     font-size: 16.2rem;
     margin-bottom: 4rem;
     color: #fff;
-    animation: pulsate 0.11s ease-in-out infinite alternate; 
+    animation: pulsate 0.11s ease-in-out infinite alternate;
+}
+
+body {
+    overflow: hidden;
 }
 
 .container {
@@ -98,7 +102,7 @@ h2 {
 }
 
 #highscore-btn:hover {
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(255,255,0,0.5)
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(255, 255, 0, 0.5)
 }
 
 .fa-crown {
@@ -106,7 +110,7 @@ h2 {
     margin-left: 1rem;
 }
 
-  .fade-in-text {
+.fade-in-text {
     text-align: center;
     bottom: 200px;
     position: relative;
@@ -117,65 +121,91 @@ h2 {
     -moz-animation: fadeIn 8s;
     -o-animation: fadeIn 8s;
     -ms-animation: fadeIn 8s;
-    color:white;
-  }
-  
-  @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  @-moz-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  @-webkit-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  @-o-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  @-ms-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
+    color: white;
+}
 
-  @keyframes pulsate {
-    
-    100% {
-  
-        text-shadow:
-        0 0 4px #fff,
-        0 0 11px #fff,
-        0 0 19px #fff,
-        0 0 40px #f09,
-        0 0 80px #f09,
-        0 0 90px #f09,
-        0 0 100px #f09,
-        0 0 150px #f09;
-    
-    }
-    
+@keyframes fadeIn {
     0% {
-  
-      text-shadow:
-      0 0 4px #fff,
-      0 0 10px #fff,
-      0 0 18px #fff,
-      0 0 38px #f09,
-      0 0 73px #f09,
-      0 0 80px #f09,
-      0 0 94px #f09,
-      0 0 140px #f09;
-  
-  }
+        opacity: 0;
+    }
 
-  }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulsate {
+
+    100% {
+
+        text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #fff,
+            0 0 40px #f09,
+            0 0 80px #f09,
+            0 0 90px #f09,
+            0 0 100px #f09,
+            0 0 150px #f09;
+
+    }
+
+    0% {
+
+        text-shadow:
+            0 0 4px #fff,
+            0 0 10px #fff,
+            0 0 18px #fff,
+            0 0 38px #f09,
+            0 0 73px #f09,
+            0 0 80px #f09,
+            0 0 94px #f09,
+            0 0 140px #f09;
+
+    }
+
+}
+
 /* End Page CSS */
 .end-form-container {
     width: 100%;
@@ -249,12 +279,15 @@ input::placeholder {
     top: 0;
     bottom: 0;
     z-index: -1;
-  }
+}
 
-  @media (max-width: 750px) {
-    #background-video { display: none; }
+@media (max-width: 750px) {
+    #background-video {
+        display: none;
+    }
+
     body {
-      background: url("https://assets.codepen.io/6093409/river.jpg") no-repeat;
-      background-size: cover;
+        background: url("https://assets.codepen.io/6093409/river.jpg") no-repeat;
+        background-size: cover;
     }
 }
