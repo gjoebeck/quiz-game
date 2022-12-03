@@ -84,7 +84,26 @@ let questions = [
         choice3: 'Judo',
         choice4: 'Muay Thai',
         answer: 4,
+    },
+
+    {
+        question: "What is the Los Angeles Laker's longest winning streak?",
+        choice1: '21',
+        choice2: '15',
+        choice3: '33',
+        choice4: '19',
+        answer: 3,
+    },
+
+    {
+        question: "What is the most popular sport in the world?",
+        choice1: 'Basketball',
+        choice2: 'Soccer',
+        choice3: 'MMA',
+        choice4: 'Badminton',
+        answer: 2,
     }
+
 ]
 
 const SCORE_POINTS = 100;
