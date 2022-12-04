@@ -112,10 +112,10 @@ body {
 
 .fade-in-text {
     text-align: center;
-    bottom: 200px;
-    position: relative;
+    display: flex;
+    justify-content: center;
     font-family: Arial;
-    font-size: 60px;
+    font-size: 1.75rem;
     animation: fadeIn 8s;
     -webkit-animation: fadeIn 8s;
     -moz-animation: fadeIn 8s;
