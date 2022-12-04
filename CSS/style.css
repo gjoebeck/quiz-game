@@ -113,7 +113,7 @@ body {
 .fade-in-text {
     text-align: center;
     display: flex;
-    justify-content: center;
+    justify-content: baseline;
     font-family: Arial;
     font-size: 1.75rem;
     animation: fadeIn 8s;
