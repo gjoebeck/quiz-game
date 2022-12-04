@@ -94,8 +94,49 @@ let questions = [
         choice3: 'John Steinbeck',
         choice4: 'Marie Curie née Skodowlska',
         answer: 2,
-    }
+    },
+    {
+        question: 'Which Carthaginean general crossed the Alps with elephants?',
+        choice1: 'Hasdrubal the Fair',
+        choice2: 'Hannibal Barca',
+        choice3: 'Mago',
+        choice4: 'Hamilcar Barca',
+        answer: 2,
+    },
+    {
+        question: 'What year did the United States declare independence from Great Britain?',
+        choice1: '1783',
+        choice2: '1776',
+        choice3: '1778',
+        choice4: '1681',
+        answer: 2,
+    },
 
+    {
+        question: 'Who is the movie "The Revenant" based on?',
+        choice1: 'Kit Carson',
+        choice2: 'Jebediah Smith',
+        choice3: 'Hugh Glass',
+        choice4: 'Jim Bridger',
+        answer: 3,
+    },
+
+    {
+        question: 'Which empire ruled the largest contiguous land area in history?',
+        choice1: 'The Mongol Empire',
+        choice2: 'The Russian Empire',
+        choice3: 'The Roman Empire',
+        choice4: 'The Ottoman Empire',
+    },
+
+    {
+        question: 'What was the first Chinese dynasty?',
+        choice1: 'The Shang Dynasty',
+        choice2: 'The Zhou Dynasty',
+        choice3: 'The Qin Dynasty',
+        choice4: 'The Xia Dynasty',
+        answer: 4,
+    }
 ]
 
 const SCORE_POINTS = 100;
