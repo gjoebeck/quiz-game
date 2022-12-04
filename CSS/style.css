@@ -21,7 +21,7 @@ h1 {
 
 
 h2 {
-    font-size: 3.2rem;
+    font-size: 5.6rem;
     margin-bottom: 4rem;
     color: #fff;
     animation: pulsate 0.11s ease-in-out infinite alternate;
@@ -113,7 +113,8 @@ body {
 .fade-in-text {
     text-align: center;
     display: flex;
-    justify-content: baseline;
+    justify-content: center;
+    padding-top: 2rem;
     font-family: Arial;
     font-size: 1.75rem;
     animation: fadeIn 8s;
