@@ -21,7 +21,7 @@ h1 {
 
 
 h2 {
-    font-size: 5.6rem;
+    font-size: 9.6rem;
     margin-bottom: 4rem;
     color: #fff;
     animation: pulsate 0.11s ease-in-out infinite alternate;
@@ -62,17 +62,10 @@ body {
 
 .hidden {
     display: none;
-}
-
-.navigation-icons {
-    display: flex;
-    justify-content: right;
-    width: 100%;
-    margin-bottom: 4rem;
-}
+} 
 
 .btn {
-    font-size: 2.4rem;
+    font-size: 1.4rem;
     padding: 2rem 0;
     width: 30rem;
     text-align: center;
