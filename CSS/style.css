@@ -13,7 +13,7 @@
 }
 
 h1 {
-    font-size: 5.4rem;
+    font-size: 5rem;
     color: #fff;
     margin-bottom: 5rem;
 }
@@ -25,10 +25,6 @@ h2 {
     margin-bottom: 4rem;
     color: #fff;
     animation: pulsate 0.11s ease-in-out infinite alternate;
-}
-
-body {
-    overflow: hidden;
 }
 
 .container {

@@ -16,11 +16,12 @@
     <video id="background-video" autoplay loop muted>
         <source src="https://media.githubusercontent.com/media/gjoebeck/quiz-game/main/Animations/210329_06B_Bali_1080p_013.mp4" type="video/mp4">
     </video>
+    <div>
+        <p id="safeTimerDisplay"></p>
+        <div class="navigation-icons"></div>
+    </div>
     <div class="container">
-        <div>
-            <p id="safeTimerDisplay"></p>
-            <div class="navigation-icons"></div>
-        </div>
+        
         <div id="game" class="justify-center flex-column">
             <div id="hud">
                 <div class="display-bar">
@@ -32,17 +33,16 @@
                     </div>
                 </div>
                 <div class="hud-item">
+                    <h1 id="life">
+                        3
+                    </h1>
                     <p class="hud-prefix">
                         Score
                     </p>
                     <h1 class="hud-main-text" id="score">
                         0
                     </h1>
-                </div>
-                <div class="display-bar">
-                    <h1 class="hud-main-text" id="life">
-                        3
-                    </h1>
+                    
                 </div>
             </div>
             <h1 id="question">What is the answer to this question?</h1>

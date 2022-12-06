@@ -95,15 +95,20 @@ body {
 }
 
 #life {
+    text-align: center;
     display: flex;
     justify-content: space-between;
-    height: 10rem;
 }
 
 #safeTimerDisplay {
     display: flex;
     justify-content: left;
     font-size: 3rem;
+}
+
+#question {
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 768px) {
