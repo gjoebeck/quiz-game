@@ -13,18 +13,17 @@
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 5.4rem;
     color: #fff;
     margin-bottom: 5rem;
 }
 
 
-
 h2 {
-    font-size: 9.6rem;
+    font-size: 16.2rem;
     margin-bottom: 4rem;
     color: #fff;
-    animation: pulsate 0.11s ease-in-out infinite alternate;
+    animation: pulsate 0.11s ease-in-out infinite alternate; 
 }
 
 .container {
@@ -36,6 +35,7 @@ h2 {
     max-width: 80rem;
     margin: 0 auto;
     padding: 2rem;
+    
 }
 
 .flex-column {
@@ -58,10 +58,17 @@ h2 {
 
 .hidden {
     display: none;
-} 
+}
+
+.navigation-icons {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    margin-bottom: 4rem;
+}
 
 .btn {
-    font-size: 1.4rem;
+    font-size: 2.4rem;
     padding: 2rem 0;
     width: 30rem;
     text-align: center;
@@ -91,111 +98,87 @@ h2 {
 }
 
 #highscore-btn:hover {
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(255, 255, 0, 0.5)
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(255,255,0,0.5)
 }
 
+#question {
+    font-size: 3rem;
+}
 .fa-crown {
     font-size: 2.5rem;
     margin-left: 1rem;
 }
 
-.fade-in-text {
+  .fade-in-text {
     text-align: center;
     display: flex;
     justify-content: center;
-    padding-top: 2rem;
     font-family: Arial;
-    font-size: 1.75rem;
+    font-size: 3rem;
     animation: fadeIn 8s;
     -webkit-animation: fadeIn 8s;
     -moz-animation: fadeIn 8s;
     -o-animation: fadeIn 8s;
     -ms-animation: fadeIn 8s;
-    color: white;
-}
+    color:white;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
+  @keyframes pulsate {
+    
     100% {
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-o-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-ms-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes pulsate {
-
-    100% {
-
+  
         text-shadow:
-            0 0 4px #fff,
-            0 0 11px #fff,
-            0 0 19px #fff,
-            0 0 40px #f09,
-            0 0 80px #f09,
-            0 0 90px #f09,
-            0 0 100px #f09,
-            0 0 150px #f09;
-
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #f09,
+        0 0 80px #f09,
+        0 0 90px #f09,
+        0 0 100px #f09,
+        0 0 150px #f09;
+    
     }
-
+    
     0% {
+  
+      text-shadow:
+      0 0 4px #fff,
+      0 0 10px #fff,
+      0 0 18px #fff,
+      0 0 38px #f09,
+      0 0 73px #f09,
+      0 0 80px #f09,
+      0 0 94px #f09,
+      0 0 140px #f09;
+  
+  }
 
-        text-shadow:
-            0 0 4px #fff,
-            0 0 10px #fff,
-            0 0 18px #fff,
-            0 0 38px #f09,
-            0 0 73px #f09,
-            0 0 80px #f09,
-            0 0 94px #f09,
-            0 0 140px #f09;
-
-    }
-
-}
-
+  }
 /* End Page CSS */
 .end-form-container {
     width: 100%;
@@ -269,22 +252,26 @@ input::placeholder {
     top: 0;
     bottom: 0;
     z-index: -1;
-}
+  }
 
-@media (max-width: 750px) {
-    #background-video {
-        display: none;
-    }
-
+  @media (max-width: 750px) {
+    #background-video { display: none; }
     body {
-        background: url("https://assets.codepen.io/6093409/river.jpg") no-repeat;
-        background-size: cover;
+      background: url("https://assets.codepen.io/6093409/river.jpg") no-repeat;
+      background-size: cover;
     }
 }
 
-@media (max-width: 1072px) {
+@media screen and (min-width: 500px) {
     body {
-        width: 100vw;
-        height: 100vh;
+    width: 60vw;
+    height: 60vh;
     }
-}
+ }
+ 
+ @media screen and (min-width: 800px) {
+    body {
+       width:100vw;
+       height: 100vh;
+    }
+ }
