@@ -127,7 +127,6 @@ let questions = [
         choice2: 'The Russian Empire',
         choice3: 'The Roman Empire',
         choice4: 'The Ottoman Empire',
-        
     },
 
     {
