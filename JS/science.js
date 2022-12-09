@@ -87,8 +87,39 @@ let questions = [
     },
 
     {
-        question: 'What is the most '
+        question: 'What is the heaviest naturally occuring element in the periodic table?',
+        choice1: 'Osmium',
+        choice2: 'Plutonium',
+        choice3: 'Uranium',
+        choice4: 'Lead',
+        answer: 3,
+    },
+    {
+        question: 'Which animal has the largest eyes?',
+        choice1: 'Blue whale',
+        choice2: 'Giant squid',
+        choice3: 'Giraffe',
+        choice4: 'Colossal squid',
+        answer: 4,
+    },
+    {
+        question: 'Which has the highest melting point?',
+        choice1: 'Zinc',
+        choice2: 'Aluminum',
+        choice3: '14kt Gold',
+        choice4: 'Sterling Silver',
+        answer: 4,
+    },
+    {
+        question: 'What is the most abundant element in the human body?',
+        choice1: 'Oxygen',
+        choice2: 'Carbon',
+        choice3: 'Hydrogen',
+        choice4: 'Nitrogen',
+        answer: 3,ad
     }
+
+
 ]
 
 const SCORE_POINTS = 100;
