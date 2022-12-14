@@ -93,6 +93,18 @@ let questions = [
         choice3: 'Oxygen',
         choice4: 'Carbon',
         answer: 3,
+    },
+
+    {
+        question: "What is the most abundant element in the Earth's crust?",
+        choice1: 'Hydrogen',
+        choice2: 'Helium',
+        choice3: 'Oxygen',
+        choice4: 'Carbon',
+        answer: 4,
+    },
+    {
+        question: ""
     }
 
 
