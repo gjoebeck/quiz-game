@@ -186,6 +186,24 @@ let questions = [
         choice3: "Quiche Lorraine",
         choice4: "Boeuf Bourguignon",
         answer: 1,
+    },
+
+    {
+        question: "Which country has the most tornadoes per square mile?",
+        choice1: "England",
+        choice2: "Canada",
+        choice3: "Mexico",
+        choice4: "United States",
+        answer: 1,
+    },
+
+    {
+        question: "What is the northernmost inhabited place on Earth?",
+        choice1: "Longyearbyen, Norway",
+        choice2: "Nuuk, Greenland",
+        choice3: "Reykjavik, Iceland",
+        choice4: "Tromso, Norway",
+        answer: 1,
     }
 
 
