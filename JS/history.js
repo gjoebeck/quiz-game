@@ -140,7 +140,12 @@ let questions = [
     },
 
     {
-        question: ''
+        question: 'Which kingdom did Mansa Musa rule?',
+        choice1: 'The Ghana Empire',
+        choice2: 'The Songhai Empire',
+        choice3: 'The Mali Empire',
+        choice4: 'The Kanem Empire',
+        answer: 3,
     }
 ]
 
