@@ -6,23 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Page</title>
-    <link rel="stylesheet" href="./CSS/style.css">
-    <link rel="stylesheet" href="./CSS/game.css">
+    <link rel="stylesheet" href="./CSS/test.css">
+    <link rel="stylesheet" href="./CSS/testGame.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     <script src="https://kit.fontawesome.com/f690810a60.js" crossorigin="anonymous"></script>
     <audio src="Music/weeknds-122592.mp3"></audio>
     <audio src="mixkit-correct-answer-tone-2870.wav" id="correctSound"></audio>
+    
 
 </head>
 
 <body>
     
-    <video id="background-video" autoplay loop muted>
-        <source src="https://media.githubusercontent.com/media/gjoebeck/quiz-game/main/Animations/210329_06B_Bali_1080p_005(1).mp4" type="video/mp4">
-    </video>
     <div class="container">
+        
         <div id="game" class="justify-center flex-column">
             <div id="hud">
-                <div class="display-bar">
+                <div class="container-fluid">
                     <p id="progressText" class="hud-prefix">
                         Question
                     </p>
@@ -30,6 +30,7 @@
                         <div id="progressBarFull"></div>
                     </div>
                 </div>
+                <div class="container-fluid">
                 <div class="hud-item">
                     <p class="hud-prefix">
                         Score
@@ -42,7 +43,6 @@
                     <h1 class="hud-main-text" id="life">
                         3
                     </h1>
-                </div>
             </div>
             <h1 id="question">What is the answer to this question?</h1>
             <div class="choice-container">
